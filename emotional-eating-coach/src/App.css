@@ -229,11 +229,203 @@ body {
   border: none;
 }
 
+.header-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.insights-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 300px;
+}
+
+/* Crisis Alert Styles */
+.crisis-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.crisis-alert {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  max-width: 500px;
+  margin: 1rem;
+  text-align: center;
+}
+
+.crisis-alert h3 {
+  color: #e74c3c;
+  margin-bottom: 1rem;
+}
+
+.crisis-resources {
+  margin: 1.5rem 0;
+  text-align: left;
+}
+
+.resource {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  border-left: 4px solid #e74c3c;
+}
+
+.crisis-close {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Check-in Notification */
+.checkin-notification {
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  color: white;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.checkin-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.checkin-icon {
+  font-size: 1.5rem;
+}
+
+.checkin-message {
+  flex: 1;
+}
+
+.checkin-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.checkin-respond, .checkin-dismiss {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.checkin-respond {
+  background: white;
+  color: #667eea;
+}
+
+.checkin-dismiss {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+/* Enhanced Message Styles */
+.agent-action {
+  background: #e3f2fd;
+  color: #1976d2;
+  padding: 0.25rem 0.5rem;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  display: inline-block;
+}
+
+.confidence {
+  font-size: 0.7rem;
+  opacity: 0.7;
+  margin-left: 0.5rem;
+}
+
+.intervention-btn {
+  background: #27ae60;
+  color: white;
+  border: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+.message-insights {
+  margin-top: 0.5rem;
+}
+
+.insight {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Typing Animation */
+.typing {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.typing span {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background: #667eea;
+  display: inline-block;
+  animation: typing 1.4s infinite ease-in-out;
+}
+
+.typing span:nth-child(1) { animation-delay: -0.32s; }
+.typing span:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes typing {
+  0%, 80%, 100% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Enhanced Analytics */
 .analytics {
   background: rgba(255, 255, 255, 0.95);
   border-radius: 15px;
   padding: 1.5rem;
-  min-width: 250px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
@@ -247,14 +439,133 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  margin-bottom: 1rem;
 }
 
-.stats > div {
+.stat-item {
   background: #f8f9fa;
   padding: 0.75rem;
   border-radius: 10px;
   font-size: 0.9rem;
   border-left: 4px solid #667eea;
+}
+
+.risk-analysis {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.risk-analysis h4 {
+  margin-bottom: 0.5rem;
+  color: #e74c3c;
+  font-size: 0.9rem;
+}
+
+.risk-item {
+  background: #ffebee;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  margin-bottom: 0.25rem;
+  border-left: 3px solid #e74c3c;
+}
+
+.patterns {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.patterns h4 {
+  margin-bottom: 0.5rem;
+  color: #f39c12;
+  font-size: 0.9rem;
+}
+
+.pattern-times {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.risk-time {
+  background: #fff3cd;
+  padding: 0.25rem 0.5rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  border: 1px solid #ffeaa7;
+}
+
+/* Insights Panel */
+.insights-panel {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.insights-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.insights-header h3 {
+  margin: 0;
+  color: #333;
+}
+
+.clear-insights {
+  background: #95a5a6;
+  color: white;
+  border: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.insights-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.insight-item {
+  background: #e8f5e8;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  border-left: 4px solid #27ae60;
+}
+
+/* Recommendations Panel */
+.recommendations-panel {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.recommendations-panel h3 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.recommendations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.recommendation-item {
+  background: #f0f8ff;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  border-left: 4px solid #3498db;
 }
 
 @media (max-width: 768px) {
