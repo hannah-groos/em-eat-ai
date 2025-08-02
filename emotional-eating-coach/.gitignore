@@ -24,3 +24,4 @@ yarn-debug.log*
 yarn-error.log*
 .env
 emotional-eating-coach/backend/.env
+node_modules/
