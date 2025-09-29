@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-require('dotenv').config();
+require('dotenv').config({ path: '.env.local' });
 const EmotionalEatingAgent = require('./EmotionalEatingAgent'); // Create this file with the agent code
 
 const app = express();
